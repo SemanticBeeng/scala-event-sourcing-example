@@ -8,3 +8,5 @@ project/boot/
 .idea
 out
 test.*.db
+.boot
+.ivy

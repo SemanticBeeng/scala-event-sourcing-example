@@ -1,7 +1,7 @@
 import sbt._, Keys._
 
 object Build extends Build {
-  import com.github.siasia.WebPlugin._
+  //import com.github.siasia.WebPlugin._
 
   val ScalazVersion = "6.0"
   val LiftVersion = "2.4-M3"
@@ -44,7 +44,8 @@ object Build extends Build {
 
   lazy val core = Project("es2-core", file("core"))
 
-  lazy val example = Project("es2-example", file("example")) dependsOn (core) settings (webSettings :_*) settings (
+//  lazy val example = Project("es2-example", file("example")) dependsOn (core) settings (webSettings :_*) 
+   lazy val example = Project("es2-example", file("example")) dependsOn (core) settings (
     libraryDependencies ++= Seq(
       "org.mortbay.jetty" % "jetty" % "6.1.25" % "jetty",
       "javax.servlet" % "servlet-api" % "2.5" % "provided"
